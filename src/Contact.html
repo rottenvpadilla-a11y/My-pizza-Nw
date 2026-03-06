@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Pizza - Padilla</title>
+    <link href="../dist/output.css" rel="stylesheet" />
+    <link rel="icon" href="../favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!--header-->
+    <header class="py-2 fixed shadow-md w-full z-50">
+      <div class="container">
+        <!--wrapper-->
+        <div id="wrapper" class="flex justify-between items-center">
+          <!--logo-->
+          <div class="pt-2 mb-1">
+            <img class="w-30" src="../IMG/LOGO.png" alt="" />
+          </div>
+
+          <!--navigation-->
+          <nav class="headerNav">
+            <ul>
+              <li class="hover:text-primary">
+                <a href="./index.html">HOME</a>
+              </li>
+              <li class="hover:text-primary">
+                <a href="./about.html">ABOUT</a>
+              </li>
+              <li class="hover:text-primary"><a href="./menu.html">MENU</a></li>
+              <li class="hover:text-primary">
+                <a href="./Contact.html">CONTACTS</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- Toggle Menu -->
+          <div class="toggleMenu">
+            <span></span>
+            <span></span>
+          </div>
+          <!-- Transparent -->
+          <div class="transparent"></div>
+        </div>
+      </div>
+    </header>
+
+    <!--first section-->
+    <section class="flex justify-center pt-22 px-5">
+      <h5 class="flex items-center gap-3 text-primary text-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="18"
+          width="18"
+          viewBox="0 0 512 512"
+        >
+          <path
+            fill="#b23920"
+            d="M461.2 18.9C472.7 24 480 35.4 480 48l0 416c0 12.6-7.3 24-18.8 29.1s-24.8 3.2-34.3-5.1l-46.6-40.7c-43.6-38.1-98.7-60.3-156.4-63l0 95.7c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-96C57.3 384 0 326.7 0 256S57.3 128 128 128l84.5 0c61.8-.2 121.4-22.7 167.9-63.3l46.6-40.7c9.4-8.3 22.9-10.2 34.3-5.1zM224 320l0 .2c70.3 2.7 137.8 28.5 192 73.4l0-275.3c-54.2 44.9-121.7 70.7-192 73.4L224 320z"
+          />
+        </svg>
+        <span class="text-sm font-semibold leading-4 md:py-3 md:text-lg"
+          >This website provides information about our store. Online
+          transactions are coming soon.</span
+        >
+      </h5>
+    </section>
+    <!-- about location -->
+    <section id="contacts" class="aboutLocation">
+      <div class="container max-w-6xl mx-auto">
+        <div class="aboutLocation__wrapper">
+          <div class="aboutLocation__map">
+            <iframe
+              class="w-full h-[500px] md:h-[600px] object-cover"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3870.3761067170167!2d121.34801983885052!3d14.054954214381727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bd5cd2d6006569%3A0x9075b8a72b9d5fb0!2sFrontline%20Business%20Solutions%2C%20Inc.!5e0!3m2!1sen!2sph!4v1771910343242!5m2!1sen!2sph"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact form -->
+    <section class="contact-section">
+      <div class="contact-section__container">
+        <h2 class="contact-form__title">GET IN TOUCH</h2>
+
+        <form class="contact-form">
+          <div class="contact-form__row">
+            <input
+              type="text"
+              placeholder="First Name"
+              class="contact-form__input"
+            />
+            <input
+              type="text"
+              placeholder="Last Name"
+              class="contact-form__input"
+            />
+          </div>
+
+          <input
+            type="email"
+            placeholder="Email Address"
+            class="contact-form__input"
+          />
+          <input
+            type="text"
+            placeholder="Subject"
+            class="contact-form__input"
+          />
+          <textarea
+            rows="5"
+            placeholder="Your Message"
+            class="contact-form__input contact-form__textarea"
+          ></textarea>
+
+          <div class="flex justify-center">
+            <button type="submit" class="contact-form__button">
+              SUBMIT FORM
+            </button>
+          </div>
+        </form>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <!-- wrapper -->
+      <div class="footerWrapper">
+        <img src="../IMG/LOGO.png" alt="logo" />
+        <ul>
+          <li>
+            <h4>ADDRESS</h4>
+            <p>570 8th Ave, New York, NY</p>
+            <p>10018 United States</p>
+          </li>
+          <li>
+            <h4>BOOK A TABLE</h4>
+            <p>Dogfood Och Sliders Foodtruck.</p>
+            <p>Under Om Oss Kan Ni Lasa</p>
+          </li>
+          <li>
+            <h4>OPENING HOURS</h4>
+            <p>Monday - Friday</p>
+            <p>10:00 AM - 11:00PM</p>
+          </li>
+        </ul>
+        <p class="text-primary">0123456789</p>
+      </div>
+    </footer>
+
+    <!--javascript-->
+    <script src="./js/toggle-menu.js"></script>
+    <script src="./js/foodTabs.js"></script>
+    <script src="./js/accordion.js"></script>
+    <script src="./js/slider.js"></script>
+  </body>
+</html>

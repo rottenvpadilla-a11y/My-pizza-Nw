@@ -1,0 +1,293 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Poppins";
+  src: url(/fonts/Poppins-Regular.woff2) format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(/fonts/Poppins-Medium.woff2) format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(/fonts/Poppins-SemiBold.woff2) format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins";
+  src: url(/fonts/Poppins-Bold.woff2) format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@theme {
+  --font-Poppins: "Poppins", sans-serif;
+  --color-primary: #b23920;
+  --color-secondary: #f7b754;
+  --color-tertiary: #223c5f;
+}
+
+@layer base {
+  html {
+    @apply scroll-smooth scroll-p-16;
+  }
+  body {
+    @apply overflow-x-hidden font-Poppins text-black/80 text-base bg-white;
+  }
+
+  .container {
+    @apply max-w-7xl w-full mx-auto px-4;
+  }
+
+  .headerContainer {
+    @apply w-full mx-auto px-4 lg:px-50;
+  }
+
+  h1 {
+    @apply text-[clamp(3rem,6vw,4rem)] font-bold;
+  }
+  h2 {
+    @apply text-[clamp(1.5rem,5vw,2.5rem)] font-bold;
+  }
+  h3 {
+    @apply text-[clamp(1.25rem,4vw,2rem)] font-bold;
+  }
+  h4 {
+    @apply text-[clamp(1rem,3vw,1.75rem)] font-bold;
+  }
+  h5 {
+    @apply text-xl font-semibold;
+  }
+  h6 {
+    @apply text-lg font-semibold;
+  }
+}
+/* components */
+@layer components {
+  header {
+    @apply bg-white;
+  }
+  .headerNav ul {
+    @apply flex flex-col gap-5 fixed w-full top-26 text-center items-center overflow-hidden right-0 h-0 opacity-0 duration-300 
+    /* Desktop View */
+    md:opacity-100 md:flex-row md:items-center md:top-auto md:h-auto md:static;
+  }
+
+  .headerNav ul li a {
+    @apply text-xl;
+  }
+  .headerNav ul.open {
+    @apply h-fit opacity-100 bg-white  shadow-md w-full top-30 px-4 pb-3 duration-300;
+  }
+
+  .toggleMenu span {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .toggleMenu span:first-child {
+    @apply inline-block w-10 h-1 rounded-xl bg-primary
+    md:hidden;
+  }
+
+  .toggleMenu span:last-child {
+    @apply inline-block w-7 h-1 rounded-xl bg-primary
+    md:hidden;
+  }
+
+  .toggleMenu.open span:first-child {
+    @apply w-7
+    md:hidden;
+  }
+
+  .toggleMenu.open span:last-child {
+    @apply w-10
+    md:hidden;
+  }
+
+  .toggleMenu {
+    @apply flex flex-col gap-1
+    md:hidden;
+  }
+
+  .transparent {
+    @apply hidden;
+  }
+
+  .transparent.open {
+    @apply block fixed h-screen w-full backdrop-blur-sm left-0 top-80 duration-300 overflow-y-hidden;
+  }
+
+  .btn {
+    @apply inline-block px-6 py-3 rounded-lg font-medium text-center w-auto;
+  }
+  .btn--primary {
+    @apply bg-primary text-white;
+  }
+
+  .btn--secondary {
+    @apply bg-secondary text-black;
+  }
+
+  .btn--primary--b {
+    @apply border-2 border-primary;
+  }
+
+  .foodTabs.active {
+    @apply bg-secondary p-1 rounded-full inline-flex;
+  }
+
+  .foodTabs img {
+    @apply bg-tertiary w-30 h-30 p-1 rounded-full object-contain;
+  }
+
+  .foodItemWrap {
+    @apply grid grid-cols-2 gap-10;
+  }
+
+  .foodItem {
+    @apply hidden lg:hidden;
+  }
+  .foodItem.active {
+    @apply block lg:block;
+  }
+  .cards {
+    @apply flex flex-col gap-3 p-10 border border-white rounded-xl text-white items-center w-full h-full;
+  }
+
+  .cards ul {
+    @apply flex flex-row;
+  }
+
+  .cards img {
+    @apply size-40;
+  }
+
+  .cta {
+    @apply py-12 md:py-20 md:pb-0 bg-primary text-white;
+  }
+
+  .cta__wrapper {
+    @apply flex flex-col items-center justify-center text-center gap-6 md:flex-row;
+  }
+
+  .cta__img {
+    @apply hidden lg:block w-1/3;
+  }
+  footer {
+    @apply py-12 lg:py-20;
+  }
+
+  .footerWrapper {
+    @apply flex flex-col items-center text-center py-12 gap-8;
+  }
+
+  .footerWrapper ul {
+    @apply grid grid-cols-1 lg:grid-cols-3 gap-10;
+  }
+
+  .years {
+    @apply flex flex-col gap-3 text-white w-full;
+  }
+
+  .years__title {
+    @apply flex items-center justify-between px-4 py-3 bg-primary w-full cursor-pointer;
+  }
+
+  .years__title svg {
+    @apply transition-transform duration-300;
+  }
+
+  .years__detail {
+    @apply hidden text-black text-justify px-4 pb-4;
+  }
+
+  .years__detail.open {
+    @apply block;
+  }
+
+  .sliderItem {
+    @apply flex flex-col items-center gap-10 text-center mx-auto max-w-2xl;
+  }
+
+  .slider img {
+    @apply w-40 h-40 rounded-full object-cover mx-auto;
+  }
+
+  .eventTab {
+    @apply font-bold border-r pr-3 cursor-pointer lg:px-10 border-white;
+  }
+
+  .eventTab:last-child {
+    @apply border-none;
+  }
+
+  .eventTab.active {
+    @apply text-primary border-white;
+  }
+
+  .eventItemWrap {
+    @apply grid grid-cols-3 gap-0 lg:gap-10 items-center;
+  }
+
+  .eventItem {
+    @apply hidden lg:hidden;
+  }
+
+  .eventItem.active {
+    @apply block lg:block;
+  }
+
+  .menuCards {
+    @apply flex flex-col gap-3 p-5 lg:border lg:border-white rounded-xl text-white text-center items-center w-full h-120;
+  }
+
+  .menuCards ul {
+    @apply flex flex-row;
+  }
+
+  .menuCards img {
+    @apply size-40;
+  }
+}
+/* contact */
+@layer components {
+  .contact-section {
+    @apply py-16;
+    background: var(--color-secondary);
+  }
+
+  .contact-section__container {
+    @apply container max-w-3xl mx-auto px-4;
+  }
+
+  .contact-form__title {
+    @apply text-4xl font-bold text-center mb-10 text-black;
+  }
+
+  .contact-form {
+    @apply space-y-5;
+  }
+
+  .contact-form__row {
+    @apply grid gap-4 grid-cols-2;
+  }
+
+  .contact-form__input {
+    @apply w-full rounded-xl px-5 py-4 border border-gray-200 bg-white text-gray-700
+   placeholder-gray-400 shadow-sm focus:border-primary focus:ring-2 focus:ring-primary/30 focus:outline-none;
+  }
+
+  .contact-form__textarea {
+    @apply h-44 resize-none;
+  }
+
+  .contact-form__button {
+    @apply px-10 py-3 bg-primary text-white font-semibold rounded-lg shadow
+     hover:bg-[#91261a] transition;
+  }
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Pizza - AROCENA</title>
+    <link href="../dist/output.css" rel="stylesheet"/>
+    <link rel="icon" href="../favicon.ico" />
+</head>
+<body>
+
+<!--header-->
+    <header class="py-2 fixed shadow-md w-full z-50">
+      <div class="container">
+        <!--wrapper-->
+        <div id="wrapper" class="flex justify-between items-center">
+          <!--logo-->
+          <div class="pt-2 mb-1">
+            <img class="w-30" src="../IMG/LOGO.png" alt="" />
+          </div>
+
+          <!--navigation-->
+          <nav class="headerNav">
+            <ul>
+              <li class="hover:text-primary"><a href="./index.html">HOME</a></li>
+              <li class="hover:text-primary"><a href="./about.html">ABOUT</a></li>
+              <li class="hover:text-primary"><a href="./menu.html">MENU</a></li>
+              <li class="hover:text-primary"><a href="#contacts">CONTACTS</a></li>
+            </ul>
+          </nav>
+          <!-- Toggle Menu -->
+          <div class="toggleMenu">
+            <span></span>
+            <span></span>
+          </div>
+          <!-- Transparent -->
+          <div class="transparent"></div>
+        </div>
+      </div>
+    </header>
+    
+<!--first section-->
+    <section class="flex justify-center pt-22 px-5">
+       <h5 class="flex items-center gap-3 text-primary text-center">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="18"
+          width="18"
+          viewBox="0 0 512 512"
+        >
+          <path
+            fill="#b23920"
+            d="M461.2 18.9C472.7 24 480 35.4 480 48l0 416c0 12.6-7.3 24-18.8 29.1s-24.8 3.2-34.3-5.1l-46.6-40.7c-43.6-38.1-98.7-60.3-156.4-63l0 95.7c0 17.7-14.3 32-32 32l-32 0c-17.7 0-32-14.3-32-32l0-96C57.3 384 0 326.7 0 256S57.3 128 128 128l84.5 0c61.8-.2 121.4-22.7 167.9-63.3l46.6-40.7c9.4-8.3 22.9-10.2 34.3-5.1zM224 320l0 .2c70.3 2.7 137.8 28.5 192 73.4l0-275.3c-54.2 44.9-121.7 70.7-192 73.4L224 320z"
+          />
+        </svg>
+        <span class="text-sm font-semibold leading-4 md:py-3 md:text-lg">This website provides information about our store. Online
+          transactions are coming soon.</span>
+      </h5> 
+    </section>
+
+<!--banner-->
+<section class="relative bg-[url('/IMG/menubanner.jpg')] py-90 bg-cover bg-left md:bg-cover md:bg-center md:bg-no-repeat">
+     <div class="absolute inset-0 bg-black/70"></div>
+    <div class="container relative">
+        <!--wrapper-->
+        <div class="">
+            <h1 class="font-extrabold text-4xl ml-13 text-white  md:text-7xl md:text-center md:-mt-50">ALWAYS FRESH & READY <br> TO BE SERVED</h1>
+        </div>
+    </div>
+</section>
+
+<!-- CTA section -->
+    <section class="py-5 md:py-0 bg-primary md:px-40">
+      <div class="container">
+        <!-- wrapper -->    
+        <div class="text-center items-center text-white grid grid-cols-1 md:grid-cols-2">
+        <div><img class="hidden md:block justify-self-end " src="../IMG/chef.png" alt="chef"></div>
+          <div class="details">
+            <h2>LET'S CONNECT</h2>
+          <p class="mb-4">and get a 10% off bill offers and invites</p>
+          <div class="bg-white p-4 shadow-md max-w-md mx-auto">
+            <form action="#" class="flex items-center gap-2">
+              <input
+                type="email"
+                placeholder="YOUR EMAIL ADDRESS"
+                class="flex-1 px-4 py-2 rounded-md text-black placeholder:text-gray-400 focus:outline-none" 
+              />
+
+              <button type="submit" class="btn--unrounded btn--yellow">
+                SUBSCRIBE
+              </button>
+            </form>
+          </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+<!-- Footer -->
+    <footer>
+    <div class="container md:px-40">
+        <!-- wrapper -->
+       <div class="footerWrapper">
+        <img src="../IMG/LOGO.png" alt="logo" />
+         <ul class="footerDetail">
+          <li>
+            <h4>ADDRESS</h4>
+            <p>570 8th Ave, New York, NY</p>
+            <p>10018 United States</p>
+          </li>
+          <li>
+            <h4>BOOK A TABLE</h4>
+            <p>Dogfood Och Sliders Foodtruck.</p>
+            <p>Under Om Oss Kan Ni Lasa</p>
+          </li>
+          <li>
+            <h4>OPENING HOURS</h4>
+            <p>Monday - Friday</p>
+            <p>10:00 AM - 11:00PM</p>
+          </li>
+        </ul>   
+        </div>
+        <p class="text text-primary">0123456789</p>
+      </div> 
+    </div>
+      <!-- wrapper -->
+      
+    </footer>
+
+<!--javascript-->
+    <script src="./js/toggle-menu.js"></script>
+
+</body>
+</html>
